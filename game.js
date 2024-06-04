@@ -202,9 +202,14 @@ win=()=>{
 	openm('wincontent');
 	openm('collection');
 };
-close=m=>{
-	document.getElementById(m).style.display="none";
+close = m => {
+    const element = document.getElementById(m);
+    if (element) {
+        element.style.display = "none";
+    }
 };
+
+
 clearForge=()=>{
 	var forgeElements = document.getElementById('forge').getElementsByTagName('img');
 	var count = forgeElements.length;
